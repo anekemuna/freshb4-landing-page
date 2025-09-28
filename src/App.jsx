@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import freshB4Logo from "./assets/freshB4_mascot.png";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -16,6 +17,9 @@ function App() {
       {/* Hero Section */}
       <header className="hero">
         <div className="hero-badge">🏆 Hackathon Project 2025</div>
+        <div className="hero-logo">
+          <img src={freshB4Logo} alt="FreshB4 Logo" className="logo-image" />
+        </div>
         <h1 className="hero-title">FreshB4</h1>
         <h2 className="hero-subtitle">Less Waste, More Taste</h2>
         <p className="hero-description">
@@ -305,8 +309,8 @@ function App() {
             <h3>AI & Analysis</h3>
             <div className="tech-items">
               <span className="tech-item">Google Gemini API</span>
-              <span className="tech-item">Computer Vision</span>
-              <span className="tech-item">Machine Learning</span>
+              {/* <span className="tech-item">Computer Vision</span>
+              <span className="tech-item">Machine Learning</span> */}
             </div>
           </div>
           <div className="tech-category">
@@ -314,7 +318,7 @@ function App() {
             <div className="tech-items">
               <span className="tech-item">Camera Integration</span>
               <span className="tech-item">Push Notifications</span>
-              <span className="tech-item">Local Storage</span>
+              <span className="tech-item">Firebase Firestore</span>
             </div>
           </div>
         </div>
@@ -334,7 +338,11 @@ function App() {
           <button onClick={handleSubscribe}>Get Notified</button>
         </div>
         <div className="cta-links">
-          <a href="#demo" className="cta-link">
+          <a
+            href="https://youtube.com/shorts/sS7qIE8epnE"
+            className="cta-link"
+            target="_blank"
+          >
             View Demo
           </a>
           <a href="mailto:team@freshb4.com" className="cta-link">
